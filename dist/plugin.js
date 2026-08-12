@@ -1,8 +1,12 @@
 exports.description = "Automatically switch to tiles-mode in selected folders"
-exports.version = 0.13
+exports.version = 0.15
 exports.apiRequired = 8.72 // state.uri (vfs_path.files is not mandatory)
 exports.repo = "rejetto/hfs-auto-tiles"
 exports.frontend_js = "main.js"
+exports.changelog = [
+    { version: 0.15, message: "Manual tile-mode changes are now respected while browsing an automatic folder" },
+    { version: 0.14, message: "Folder rules no longer match other folders with the same name prefix" }
+]
 
 exports.config = {
     tileSize: { frontend: true, type: 'number', defaultValue: 10, min: 1, max: 10, xs: 3 },
